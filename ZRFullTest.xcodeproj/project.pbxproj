@@ -9,16 +9,6 @@
 /* Begin PBXBuildFile section */
 		0B32AE58A80CFC43BFD68103 /* Pods_ZRFullTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59ADE48ED5E6E25BA5328F2 /* Pods_ZRFullTest.framework */; };
 		5E027D9124C93232002474B4 /* ThirdNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E027D9024C93232002474B4 /* ThirdNextViewController.swift */; };
-		5E16C19024C97B9E00C515BB /* WelyPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E16C18724C97B9E00C515BB /* WelyPresentationController.swift */; };
-		5E16C19124C97B9E00C515BB /* ShiftInAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E16C18824C97B9E00C515BB /* ShiftInAnimator.swift */; };
-		5E16C19224C97B9E00C515BB /* FadeInAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E16C18924C97B9E00C515BB /* FadeInAnimator.swift */; };
-		5E16C19324C97B9E00C515BB /* FadeInConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E16C18A24C97B9E00C515BB /* FadeInConfiguration.swift */; };
-		5E16C19424C97B9E00C515BB /* WelyBaseAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E16C18B24C97B9E00C515BB /* WelyBaseAnimator.swift */; };
-		5E16C19524C97B9E00C515BB /* WelyBaseConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E16C18C24C97B9E00C515BB /* WelyBaseConfiguration.swift */; };
-		5E16C19624C97B9E00C515BB /* ShiftInConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E16C18D24C97B9E00C515BB /* ShiftInConfiguration.swift */; };
-		5E16C19724C97B9E00C515BB /* SlideInConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E16C18E24C97B9E00C515BB /* SlideInConfiguration.swift */; };
-		5E16C19824C97B9E00C515BB /* SlideInAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E16C18F24C97B9E00C515BB /* SlideInAnimator.swift */; };
-		5E16C19A24C97E3200C515BB /* AnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E16C19924C97E3200C515BB /* AnimatedTransitioning.swift */; };
 		5E32BAD224C17C03006C414A /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E32BAD124C17C03006C414A /* NetWork.swift */; };
 		5EE67BF024878BF6007CACDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE67BEF24878BF6007CACDC /* AppDelegate.swift */; };
 		5EE67BF724878BF6007CACDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE67BF524878BF6007CACDC /* Main.storyboard */; };
@@ -54,16 +44,6 @@
 
 /* Begin PBXFileReference section */
 		5E027D9024C93232002474B4 /* ThirdNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdNextViewController.swift; sourceTree = "<group>"; };
-		5E16C18724C97B9E00C515BB /* WelyPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelyPresentationController.swift; sourceTree = "<group>"; };
-		5E16C18824C97B9E00C515BB /* ShiftInAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftInAnimator.swift; sourceTree = "<group>"; };
-		5E16C18924C97B9E00C515BB /* FadeInAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeInAnimator.swift; sourceTree = "<group>"; };
-		5E16C18A24C97B9E00C515BB /* FadeInConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeInConfiguration.swift; sourceTree = "<group>"; };
-		5E16C18B24C97B9E00C515BB /* WelyBaseAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelyBaseAnimator.swift; sourceTree = "<group>"; };
-		5E16C18C24C97B9E00C515BB /* WelyBaseConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelyBaseConfiguration.swift; sourceTree = "<group>"; };
-		5E16C18D24C97B9E00C515BB /* ShiftInConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShiftInConfiguration.swift; sourceTree = "<group>"; };
-		5E16C18E24C97B9E00C515BB /* SlideInConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInConfiguration.swift; sourceTree = "<group>"; };
-		5E16C18F24C97B9E00C515BB /* SlideInAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInAnimator.swift; sourceTree = "<group>"; };
-		5E16C19924C97E3200C515BB /* AnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTransitioning.swift; sourceTree = "<group>"; };
 		5E32BAD124C17C03006C414A /* NetWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
 		5EE67BEC24878BF6007CACDC /* ZRFullTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZRFullTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE67BEF24878BF6007CACDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,23 +103,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5E16C18624C97B9E00C515BB /* ModalStyle */ = {
-			isa = PBXGroup;
-			children = (
-				5E16C18B24C97B9E00C515BB /* WelyBaseAnimator.swift */,
-				5E16C18C24C97B9E00C515BB /* WelyBaseConfiguration.swift */,
-				5E16C19924C97E3200C515BB /* AnimatedTransitioning.swift */,
-				5E16C18724C97B9E00C515BB /* WelyPresentationController.swift */,
-				5E16C18924C97B9E00C515BB /* FadeInAnimator.swift */,
-				5E16C18A24C97B9E00C515BB /* FadeInConfiguration.swift */,
-				5E16C18824C97B9E00C515BB /* ShiftInAnimator.swift */,
-				5E16C18D24C97B9E00C515BB /* ShiftInConfiguration.swift */,
-				5E16C18E24C97B9E00C515BB /* SlideInConfiguration.swift */,
-				5E16C18F24C97B9E00C515BB /* SlideInAnimator.swift */,
-			);
-			path = ModalStyle;
-			sourceTree = "<group>";
-		};
 		5EE67BE324878BF6007CACDC = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +128,6 @@
 		5EE67BEE24878BF6007CACDC /* ZRFullTest */ = {
 			isa = PBXGroup;
 			children = (
-				5E16C18624C97B9E00C515BB /* ModalStyle */,
 				5EE67BEF24878BF6007CACDC /* AppDelegate.swift */,
 				5EE67C1F2487931B007CACDC /* GlobalCon.swift */,
 				5EE67C2124879383007CACDC /* ZRNavViewController.swift */,
@@ -387,25 +349,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EE67C262487947A007CACDC /* ZRTabViewController.swift in Sources */,
-				5E16C19224C97B9E00C515BB /* FadeInAnimator.swift in Sources */,
 				5EE67C2224879383007CACDC /* ZRNavViewController.swift in Sources */,
 				5EE67C24248793C1007CACDC /* ZRBaseController.swift in Sources */,
 				5E027D9124C93232002474B4 /* ThirdNextViewController.swift in Sources */,
 				5EE67C28248794A1007CACDC /* FirstViewController.swift in Sources */,
-				5E16C19024C97B9E00C515BB /* WelyPresentationController.swift in Sources */,
-				5E16C19624C97B9E00C515BB /* ShiftInConfiguration.swift in Sources */,
 				5EE67C2A248794A9007CACDC /* SecondViewController.swift in Sources */,
 				5EE67BF024878BF6007CACDC /* AppDelegate.swift in Sources */,
-				5E16C19324C97B9E00C515BB /* FadeInConfiguration.swift in Sources */,
-				5E16C19524C97B9E00C515BB /* WelyBaseConfiguration.swift in Sources */,
-				5E16C19124C97B9E00C515BB /* ShiftInAnimator.swift in Sources */,
-				5E16C19424C97B9E00C515BB /* WelyBaseAnimator.swift in Sources */,
 				5EE67C2C248794B2007CACDC /* ThirdViewController.swift in Sources */,
-				5E16C19824C97B9E00C515BB /* SlideInAnimator.swift in Sources */,
 				5EE67C202487931B007CACDC /* GlobalCon.swift in Sources */,
 				5E32BAD224C17C03006C414A /* NetWork.swift in Sources */,
-				5E16C19A24C97E3200C515BB /* AnimatedTransitioning.swift in Sources */,
-				5E16C19724C97B9E00C515BB /* SlideInConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

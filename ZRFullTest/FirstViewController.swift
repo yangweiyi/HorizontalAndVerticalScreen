@@ -62,7 +62,6 @@ class FirstViewController: ZRBaseController {
             maker.center.left.right.equalToSuperview()
             maker.height.equalTo(60)
         }
-
         bottomTab.snp.makeConstraints { (maker) in
             maker.bottom.left.right.equalToSuperview()
             maker.top.equalTo(playerView.snp.bottom)
@@ -84,7 +83,24 @@ class FirstViewController: ZRBaseController {
 //
 //
 
+//        //public enum UIInterfaceOrientation : Int {
+//
+//
+//            case unknown 0
+//
+//            case portrait  1
+//
+//            case portraitUpsideDown 2
+//
+//            case landscapeLeft 3
+//
+//            case landscapeRight 4
+//        }
+
         let screenOr = UIDevice.current.orientation
+        let status =  UIApplication.shared.statusBarOrientation
+        print("状态栏的方向:\(status.rawValue)")
+
         if screenOr == .portrait,isFullScreen {
 //            var duration:TimeInterval  =  0
             // 竖屏处理
@@ -102,9 +118,6 @@ class FirstViewController: ZRBaseController {
 
         if screenOr == .landscapeLeft, !isFullScreen {
             // 左边
-//            self.playerView.snp.updateConstraints { (maker) in
-//                maker.height.equalTo(ScreenBounds.Width / 16 * 9)
-//            }
             isFullScreen = true
             UIView.animate(withDuration: 0.3, animations: {
                 if self.isFinishPortraind == true {
@@ -152,28 +165,11 @@ class FirstViewController: ZRBaseController {
 
     }
 
-
-
-
-//    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-//
-//
-//    }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         nameTextField.resignFirstResponder()
     }
-
-
-
-
     deinit {
         UIDevice.current.endGeneratingDeviceOrientationNotifications()
     }
-
-
-
-
-
-
 
 }

@@ -29,10 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         return ineterFaceRotation
     }
-    
+    // 监听网络变化
     fileprivate func startListenNetFunc(){
         NetWorkManagerState.shared.statNetWorkReachablity { (state) in
-
             self.interStarte = state
             NotificationCenter.default.post(name: Notification.Name("helloWorld"), object: nil)
         }
