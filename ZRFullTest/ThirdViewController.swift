@@ -9,7 +9,7 @@
 import UIKit
 
 class ThirdViewController: ZRBaseController {
-    
+
     lazy var centerButton: UIButton = {
         let centerBtn = UIButton(type: .custom)
         centerBtn.frame =  ZRRect(x: ScreenBounds.Width/2-50, y: ScreenBounds.Height/2-20, width: 100, hight: 40)

@@ -11,15 +11,18 @@ import SnapKit
 
 
 class FirstViewController: ZRBaseController {
+
     var isFinishPortraind: Bool = true // 是否完成竖屏
     var isFullScreen: Bool = false // 是否全屏
 
-    lazy var playerView: UIView = {
-        let playerView = UIView()
-        playerView.isUserInteractionEnabled = true
-        playerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(fullClickFunc)))
-        playerView.backgroundColor = .systemPink
-        return playerView
+    lazy var tearsImageView: UIImageView = {
+        let tearsView = UIImageView()
+        tearsView.image = UIImage(named: "stars_tears")
+        tearsView.isUserInteractionEnabled = true
+
+        tearsView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(fullClickFunc)))
+        tearsView.backgroundColor = .systemPink
+        return tearsView
     }()
 
     lazy var nameTextField: UITextField = {
@@ -45,8 +48,7 @@ class FirstViewController: ZRBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(playerView)
-        playerView.addSubview(nameTextField)
+        self.view.addSubview(tearsImageView)
         self.view.addSubview(bottomTab)
         addContFunc()
         UIDevice.current.beginGeneratingDeviceOrientationNotifications()
@@ -54,17 +56,13 @@ class FirstViewController: ZRBaseController {
     }
     
     fileprivate func addContFunc() {
-        playerView.snp.makeConstraints { (maker) in
+        tearsImageView.snp.makeConstraints { (maker) in
             maker.top.left.right.equalToSuperview()
             maker.height.equalTo(ScreenBounds.Width / 16 * 9)
         }
-        nameTextField.snp.makeConstraints { (maker) in
-            maker.center.left.right.equalToSuperview()
-            maker.height.equalTo(60)
-        }
         bottomTab.snp.makeConstraints { (maker) in
             maker.bottom.left.right.equalToSuperview()
-            maker.top.equalTo(playerView.snp.bottom)
+            maker.top.equalTo(tearsImageView.snp.bottom)
         }
     }
     // 点击
@@ -77,99 +75,82 @@ class FirstViewController: ZRBaseController {
     }
     // 横竖屏间提供
     @objc func didChangeScreenFunc() {
+        let status =  UIApplication.shared.statusBarOrientation
+        if status.isPortrait,isFullScreen{
+            isFullScreen = false
+//            UIView.
+        }
 
+//        let screenOr = UIDevice.current.orientation
 //
-//        return
+//        print("状态栏的方向:\(status.rawValue)")
+//        if screenOr == .portrait,isFullScreen {
+////            var duration:TimeInterval  =  0
+//            // 竖屏处理
+//            isFullScreen = false
+//            UIView.animate(withDuration: 0.3, animations: {
+//                self.tearsImageView.snp.updateConstraints { (maker) in
+//                    maker.height.equalTo(ScreenBounds.Width / 16 * 9)
+//                }
+//                self.isFinishPortraind = false
+//            }) { (isOk) in
+//                self.isFinishPortraind = true
+//                self.portraitFinishaNextAction()
+//            }
+//        }
 //
+//        if screenOr == .landscapeLeft, !isFullScreen {
+//            // 左边
+//            isFullScreen = true
+//            UIView.animate(withDuration: 0.3, animations: {
+//                if self.isFinishPortraind == true {
+//                    self.tearsImageView.snp.updateConstraints { (maker) in
+//                        maker.height.equalTo(ScreenBounds.Width)
+//                    }
+//                }
 //
-
-//        //public enum UIInterfaceOrientation : Int {
+//            }) { (isOk) in
 //
+//            }
+//        }
 //
-//            case unknown 0
+//        if screenOr == .landscapeRight, !isFullScreen {
+//            // 右边
+//            isFullScreen = true
+//            UIView.animate(withDuration: 0.3, animations: {
 //
-//            case portrait  1
-//
-//            case portraitUpsideDown 2
-//
-//            case landscapeLeft 3
-//
-//            case landscapeRight 4
+//            }) { (idOk) in
+//                if self.isFinishPortraind == true {
+//                    self.tearsImageView.snp.updateConstraints { (maker) in
+//                        maker.height.equalTo(ScreenBounds.Width)
+//                    }
+//                }
+//            }
 //        }
 
-        let screenOr = UIDevice.current.orientation
-        let status =  UIApplication.shared.statusBarOrientation
-        print("状态栏的方向:\(status.rawValue)")
-
-        if screenOr == .portrait,isFullScreen {
-//            var duration:TimeInterval  =  0
-            // 竖屏处理
-            isFullScreen = false
-            UIView.animate(withDuration: 0.3, animations: {
-                self.playerView.snp.updateConstraints { (maker) in
-                    maker.height.equalTo(ScreenBounds.Width / 16 * 9)
-                }
-                self.isFinishPortraind = false
-            }) { (isOk) in
-                self.isFinishPortraind = true
-                self.portraitFinishaNextAction()
-            }
-        }
-
-        if screenOr == .landscapeLeft, !isFullScreen {
-            // 左边
-            isFullScreen = true
-            UIView.animate(withDuration: 0.3, animations: {
-                if self.isFinishPortraind == true {
-                    self.playerView.snp.updateConstraints { (maker) in
-                        maker.height.equalTo(ScreenBounds.Width)
-                    }
-                }
-
-            }) { (isOk) in
-
-            }
-        }
-
-        if screenOr == .landscapeRight, !isFullScreen {
-            // 右边
-            isFullScreen = true
-            UIView.animate(withDuration: 0.3, animations: {
-
-            }) { (idOk) in
-                if self.isFinishPortraind == true {
-                    self.playerView.snp.updateConstraints { (maker) in
-                        maker.height.equalTo(ScreenBounds.Width)
-                    }
-                }
-            }
-        }
     }
-
-
     fileprivate func portraitFinishaNextAction() {
         let orient = UIDevice.current.orientation
         if orient == .landscapeLeft || orient == .landscapeRight {
             UIView.animate(withDuration: 03, delay: 03, options: .layoutSubviews, animations: {
                 if self.isFinishPortraind == true {
-                    self.playerView.snp.updateConstraints { (maker) in
+                    self.tearsImageView.snp.updateConstraints { (maker) in
                         maker.height.equalTo(ScreenBounds.Width / 16 * 9)
                     }
                 }
             }) { (isOk) in
-                self.playerView.snp.updateConstraints { (maker) in
+                self.tearsImageView.snp.updateConstraints { (maker) in
                     maker.height.equalTo(ScreenBounds.Width)
                 }
             }
         }
-
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        nameTextField.resignFirstResponder()
-    }
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        nameTextField.resignFirstResponder()
+//    }
     deinit {
         UIDevice.current.endGeneratingDeviceOrientationNotifications()
     }
-
+    
 }
