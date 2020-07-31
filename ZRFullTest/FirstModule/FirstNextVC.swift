@@ -111,7 +111,7 @@ class FirstNextVC: ZRBaseController {
             }
         }
     }
-    
+
     deinit {
         UIDevice.current.endGeneratingDeviceOrientationNotifications()
     }

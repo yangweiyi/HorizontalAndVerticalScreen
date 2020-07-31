@@ -139,9 +139,10 @@ class SecondNextVC: ZRBaseController {
                 self.isFullScreen = false
             })
     }
+    deinit {
+        UIDevice.current.endGeneratingDeviceOrientationNotifications()
+    }
     override var prefersStatusBarHidden: Bool {
         return isFullScreen
     }
-
 }
-
