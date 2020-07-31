@@ -7,19 +7,15 @@
 //
 
 import UIKit
+import SnapKit
+
 
 class FirstNextVC: ZRBaseController {
 
-    var isFinishPortraind: Bool = true // 是否完成竖屏
     var isFullScreen: Bool = false // 是否全屏
 
-    lazy var tearsImageView: UIImageView = {
-        let tearsView = UIImageView()
-        tearsView.image = UIImage(named: "stars_tears")
-        tearsView.isUserInteractionEnabled = true
-
-        tearsView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(fullClickFunc)))
-        tearsView.backgroundColor = .systemPink
+    lazy var tearsView: TearsView = {
+        let tearsView = TearsView()
         return tearsView
     }()
 
@@ -39,21 +35,42 @@ class FirstNextVC: ZRBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(tearsImageView)
+        self.view.addSubview(tearsView)
         self.view.addSubview(bottomTab)
         bottomTab.addSubview(namelabel)
         addContFunc()
         UIDevice.current.beginGeneratingDeviceOrientationNotifications()
         NotificationCenter.default.addObserver(self, selector: #selector(didChangeScreenFunc), name: UIDevice.orientationDidChangeNotification, object: nil)
+        tearViewAllBlockFunc()
+    }
+    fileprivate func tearViewAllBlockFunc() {
+        tearsView.backButtonBlock = {
+            if self.isFullScreen {
+                UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+            } else {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+
+        tearsView.fullScreenBlock = {
+            if self.isFullScreen == true {
+                UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+            } else {
+                UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+            }
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        self.navigationController?.isNavigationBarHidden = true
-        
+        self.navigationController?.isNavigationBarHidden = true
         ZRApp.ineterFaceRotation = .all
     }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        ZRApp.ineterFaceRotation = .portrait
+    }
     fileprivate func addContFunc() {
-        tearsImageView.snp.makeConstraints { (maker) in
+        tearsView.snp.makeConstraints { (maker) in
             maker.top.left.right.equalToSuperview()
             maker.height.equalTo(ScreenBounds.Width / 16 * 9)
         }
@@ -63,44 +80,38 @@ class FirstNextVC: ZRBaseController {
         }
         bottomTab.snp.makeConstraints { (maker) in
             maker.bottom.left.right.equalToSuperview()
-            maker.top.equalTo(tearsImageView.snp.bottom)
-        }
-
-    }
-    // 点击
-    @objc func fullClickFunc() {
-        if isFullScreen == true {
-            UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
-        } else {
-            UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+            maker.top.equalTo(tearsView.snp.bottom)
         }
     }
     // 横竖屏间提供
     @objc func didChangeScreenFunc() {
-        let status =  UIApplication.shared.statusBarOrientation
-        if status.isPortrait,isFullScreen{
+        let status = UIApplication.shared.statusBarOrientation
+        if status.isPortrait, isFullScreen {
             isFullScreen = false
             smallScreenFunc()
         }
-        if status.isLandscape,isFullScreen == false{
+        if status.isLandscape, isFullScreen == false {
             isFullScreen = true
             fullScreenFunc()
         }
     }
-    fileprivate func smallScreenFunc(){
+
+    fileprivate func smallScreenFunc() {
         UIView.animate(withDuration: 0.3) {
-            self.tearsImageView.snp.updateConstraints { (maker) in
+            self.tearsView.snp.updateConstraints { (maker) in
                 maker.height.equalTo(ScreenBounds.Width / 16 * 9)
             }
         }
     }
-    fileprivate func fullScreenFunc(){
+
+    fileprivate func fullScreenFunc() {
         UIView.animate(withDuration: 0.3) {
-            self.tearsImageView.snp.updateConstraints { (maker) in
+            self.tearsView.snp.updateConstraints { (maker) in
                 maker.height.equalTo(ScreenBounds.Width)
             }
         }
     }
+    
     deinit {
         UIDevice.current.endGeneratingDeviceOrientationNotifications()
     }

@@ -41,7 +41,7 @@ class ZRTabViewController: UITabBarController {
     
     func setUpChilderVC(baseVC:ZRBaseController,tabTitle:String,navTitle:String) -> Void {
         
-        let baseNav = UINavigationController(rootViewController: baseVC)
+        let baseNav = ZRNavViewController(rootViewController: baseVC)
         self.addChild(baseNav)
         baseNav.tabBarItem.title = tabTitle
         baseNav.navigationItem.title = navTitle

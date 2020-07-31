@@ -9,11 +9,12 @@
 import UIKit
 import SnapKit
 
+
 class FirstViewController: ZRBaseController {
     
     lazy var centerButton: UIButton = {
         let centerBtn = UIButton(type: .custom)
-        centerBtn.setTitle("下一页面", for: .normal)
+        centerBtn.setTitle("First", for: .normal)
         centerBtn.setTitleColor(.systemPink, for: .normal)
         centerBtn.addTarget(self, action: #selector(nextViewControllerFunc), for: .touchUpInside)
         return centerBtn
