@@ -7,32 +7,19 @@
 //
 
 import UIKit
-
-class NewValue: Codable {
-    var name: String? = ""{
-        didSet{
-            print("name走了赋值方法:\(name)")
-        }
-    } // 名字
-    var title:String? = ""  // 标题
-    var age: Int? = 0 // 年龄
-}
+import SnapKit
 
 class ThirdNextViewController: ZRBaseController {
-    var newModel = NewValue(){
-        willSet{
-            print("走了将要赋值方法 \(newModel.name)")
-        }
-        didSet{
-            print("走了赋值方法 \(newModel.name)")
-        }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+        print("每次都会走的方法")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        newModel.name = "Hello World"
-        self.view.backgroundColor = .systemPink
-        // Do any additional setup after loading the view.
+
     }
 
 }

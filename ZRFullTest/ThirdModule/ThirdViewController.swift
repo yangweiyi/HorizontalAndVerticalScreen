@@ -18,27 +18,15 @@ class ThirdViewController: ZRBaseController {
         centerBtn.addTarget(self, action: #selector(centerClickFunc), for: .touchUpInside)
         return centerBtn
     }()
-
-    
-    lazy var thirdTableView: UITableView = {
-        let thirdView = UITableView(frame: .zero, style: .grouped)
-//        thirdView.delegate = self
-//        thirdView.dataSource = self
-        return thirdView
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.view.addSubview(thirdTableView)
-//        thirdTableView.snp.makeConstraints { (maker) in
-//            maker.left.right.top.bottom.equalToSuperview()
-//        }
-        NotificationCenter.default.addObserver(self, selector: #selector(openClick), name: Notification.Name("helloWorld"), object: nil)
         self.view.addSubview(centerButton)
     }
     @objc func centerClickFunc(){
-        
+        self.navigationController?.pushViewController(ThirdNextViewController(), animated: true)
     }
+    
+
     @objc func openClick(){
         print("网络变化!!!!!:\(ZRApp.interStarte)")
     }

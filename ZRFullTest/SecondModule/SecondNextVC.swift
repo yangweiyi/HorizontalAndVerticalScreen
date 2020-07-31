@@ -15,6 +15,7 @@ class SecondNextVC: ZRBaseController {
             self.setNeedsStatusBarAppearanceUpdate()
         }
     }
+    
     final var parentView: UIView = UIView()
     final var parentFrame: CGRect = CGRect.zero
 
@@ -145,4 +146,5 @@ class SecondNextVC: ZRBaseController {
     override var prefersStatusBarHidden: Bool {
         return isFullScreen
     }
+    
 }

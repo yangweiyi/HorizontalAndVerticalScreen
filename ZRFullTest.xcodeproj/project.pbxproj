@@ -13,6 +13,7 @@
 		5E7C8A8F24D3C4EC0067DF13 /* FirstNextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C8A8E24D3C4EC0067DF13 /* FirstNextVC.swift */; };
 		5EB6CC9524D3F09200FEFD1A /* TearsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB6CC9424D3F09200FEFD1A /* TearsView.swift */; };
 		5EB6CC9724D3F90000FEFD1A /* SecondNextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB6CC9624D3F90000FEFD1A /* SecondNextVC.swift */; };
+		5EB6CC9924D421ED00FEFD1A /* ThirdParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB6CC9824D421ED00FEFD1A /* ThirdParentViewController.swift */; };
 		5EE67BF024878BF6007CACDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE67BEF24878BF6007CACDC /* AppDelegate.swift */; };
 		5EE67BF724878BF6007CACDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE67BF524878BF6007CACDC /* Main.storyboard */; };
 		5EE67BF924878BF8007CACDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE67BF824878BF8007CACDC /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		5E7C8A8E24D3C4EC0067DF13 /* FirstNextVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNextVC.swift; sourceTree = "<group>"; };
 		5EB6CC9424D3F09200FEFD1A /* TearsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TearsView.swift; sourceTree = "<group>"; };
 		5EB6CC9624D3F90000FEFD1A /* SecondNextVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondNextVC.swift; sourceTree = "<group>"; };
+		5EB6CC9824D421ED00FEFD1A /* ThirdParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdParentViewController.swift; sourceTree = "<group>"; };
 		5EE67BEC24878BF6007CACDC /* ZRFullTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZRFullTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE67BEF24878BF6007CACDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EE67BF624878BF6007CACDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,8 +133,9 @@
 		5E7C8A8B24D3C3C50067DF13 /* ThirdModule */ = {
 			isa = PBXGroup;
 			children = (
-				5E027D9024C93232002474B4 /* ThirdNextViewController.swift */,
 				5EE67C2B248794B2007CACDC /* ThirdViewController.swift */,
+				5E027D9024C93232002474B4 /* ThirdNextViewController.swift */,
+				5EB6CC9824D421ED00FEFD1A /* ThirdParentViewController.swift */,
 			);
 			path = ThirdModule;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				5EB6CC9524D3F09200FEFD1A /* TearsView.swift in Sources */,
 				5E027D9124C93232002474B4 /* ThirdNextViewController.swift in Sources */,
 				5EE67C28248794A1007CACDC /* FirstViewController.swift in Sources */,
+				5EB6CC9924D421ED00FEFD1A /* ThirdParentViewController.swift in Sources */,
 				5EE67C2A248794A9007CACDC /* SecondViewController.swift in Sources */,
 				5EE67BF024878BF6007CACDC /* AppDelegate.swift in Sources */,
 				5EE67C2C248794B2007CACDC /* ThirdViewController.swift in Sources */,
