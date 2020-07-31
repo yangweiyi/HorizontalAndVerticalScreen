@@ -1,15 +1,14 @@
 //
-//  FirstViewController.swift
+//  FirstNextVC.swift
 //  ZRFullTest
 //
-//  Created by ZR on 2020/6/3.
+//  Created by ZR on 2020/7/31.
 //  Copyright © 2020 wely. All rights reserved.
 //
 
 import UIKit
-import SnapKit
 
-class FirstViewController: ZRBaseController {
+class FirstNextVC: ZRBaseController {
 
     var isFinishPortraind: Bool = true // 是否完成竖屏
     var isFullScreen: Bool = false // 是否全屏
@@ -38,12 +37,6 @@ class FirstViewController: ZRBaseController {
         return bottomView
     }()
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
-        ZRApp.ineterFaceRotation = .all
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(tearsImageView)
@@ -53,7 +46,12 @@ class FirstViewController: ZRBaseController {
         UIDevice.current.beginGeneratingDeviceOrientationNotifications()
         NotificationCenter.default.addObserver(self, selector: #selector(didChangeScreenFunc), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        self.navigationController?.isNavigationBarHidden = true
+        
+        ZRApp.ineterFaceRotation = .all
+    }
     fileprivate func addContFunc() {
         tearsImageView.snp.makeConstraints { (maker) in
             maker.top.left.right.equalToSuperview()
@@ -106,5 +104,4 @@ class FirstViewController: ZRBaseController {
     deinit {
         UIDevice.current.endGeneratingDeviceOrientationNotifications()
     }
-    
 }

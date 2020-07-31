@@ -10,6 +10,7 @@
 		0B32AE58A80CFC43BFD68103 /* Pods_ZRFullTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A59ADE48ED5E6E25BA5328F2 /* Pods_ZRFullTest.framework */; };
 		5E027D9124C93232002474B4 /* ThirdNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E027D9024C93232002474B4 /* ThirdNextViewController.swift */; };
 		5E32BAD224C17C03006C414A /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E32BAD124C17C03006C414A /* NetWork.swift */; };
+		5E7C8A8F24D3C4EC0067DF13 /* FirstNextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7C8A8E24D3C4EC0067DF13 /* FirstNextVC.swift */; };
 		5EE67BF024878BF6007CACDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE67BEF24878BF6007CACDC /* AppDelegate.swift */; };
 		5EE67BF724878BF6007CACDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EE67BF524878BF6007CACDC /* Main.storyboard */; };
 		5EE67BF924878BF8007CACDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EE67BF824878BF8007CACDC /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		5E027D9024C93232002474B4 /* ThirdNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdNextViewController.swift; sourceTree = "<group>"; };
 		5E32BAD124C17C03006C414A /* NetWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
+		5E7C8A8E24D3C4EC0067DF13 /* FirstNextVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNextVC.swift; sourceTree = "<group>"; };
 		5EE67BEC24878BF6007CACDC /* ZRFullTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZRFullTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE67BEF24878BF6007CACDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EE67BF624878BF6007CACDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +105,51 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5E7C8A8924D3C36A0067DF13 /* BaseVC */ = {
+			isa = PBXGroup;
+			children = (
+				5EE67C2124879383007CACDC /* ZRNavViewController.swift */,
+				5EE67C23248793C1007CACDC /* ZRBaseController.swift */,
+				5EE67C252487947A007CACDC /* ZRTabViewController.swift */,
+			);
+			path = BaseVC;
+			sourceTree = "<group>";
+		};
+		5E7C8A8A24D3C3C50067DF13 /* FirstModule */ = {
+			isa = PBXGroup;
+			children = (
+				5EE67C27248794A1007CACDC /* FirstViewController.swift */,
+				5E7C8A8E24D3C4EC0067DF13 /* FirstNextVC.swift */,
+			);
+			path = FirstModule;
+			sourceTree = "<group>";
+		};
+		5E7C8A8B24D3C3C50067DF13 /* ThirdModule */ = {
+			isa = PBXGroup;
+			children = (
+				5E027D9024C93232002474B4 /* ThirdNextViewController.swift */,
+				5EE67C2B248794B2007CACDC /* ThirdViewController.swift */,
+			);
+			path = ThirdModule;
+			sourceTree = "<group>";
+		};
+		5E7C8A8C24D3C3C50067DF13 /* SecondModule */ = {
+			isa = PBXGroup;
+			children = (
+				5EE67C29248794A9007CACDC /* SecondViewController.swift */,
+			);
+			path = SecondModule;
+			sourceTree = "<group>";
+		};
+		5E7C8A8D24D3C44C0067DF13 /* BaseConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				5EE67C1F2487931B007CACDC /* GlobalCon.swift */,
+				5E32BAD124C17C03006C414A /* NetWork.swift */,
+			);
+			path = BaseConfiguration;
+			sourceTree = "<group>";
+		};
 		5EE67BE324878BF6007CACDC = {
 			isa = PBXGroup;
 			children = (
@@ -128,16 +175,12 @@
 		5EE67BEE24878BF6007CACDC /* ZRFullTest */ = {
 			isa = PBXGroup;
 			children = (
+				5E7C8A8D24D3C44C0067DF13 /* BaseConfiguration */,
+				5E7C8A8A24D3C3C50067DF13 /* FirstModule */,
+				5E7C8A8C24D3C3C50067DF13 /* SecondModule */,
+				5E7C8A8B24D3C3C50067DF13 /* ThirdModule */,
+				5E7C8A8924D3C36A0067DF13 /* BaseVC */,
 				5EE67BEF24878BF6007CACDC /* AppDelegate.swift */,
-				5EE67C1F2487931B007CACDC /* GlobalCon.swift */,
-				5EE67C2124879383007CACDC /* ZRNavViewController.swift */,
-				5EE67C23248793C1007CACDC /* ZRBaseController.swift */,
-				5EE67C252487947A007CACDC /* ZRTabViewController.swift */,
-				5EE67C27248794A1007CACDC /* FirstViewController.swift */,
-				5EE67C29248794A9007CACDC /* SecondViewController.swift */,
-				5EE67C2B248794B2007CACDC /* ThirdViewController.swift */,
-				5E027D9024C93232002474B4 /* ThirdNextViewController.swift */,
-				5E32BAD124C17C03006C414A /* NetWork.swift */,
 				5EE67BF524878BF6007CACDC /* Main.storyboard */,
 				5EE67BF824878BF8007CACDC /* Assets.xcassets */,
 				5EE67BFA24878BF8007CACDC /* LaunchScreen.storyboard */,
@@ -350,6 +393,7 @@
 			files = (
 				5EE67C262487947A007CACDC /* ZRTabViewController.swift in Sources */,
 				5EE67C2224879383007CACDC /* ZRNavViewController.swift in Sources */,
+				5E7C8A8F24D3C4EC0067DF13 /* FirstNextVC.swift in Sources */,
 				5EE67C24248793C1007CACDC /* ZRBaseController.swift in Sources */,
 				5E027D9124C93232002474B4 /* ThirdNextViewController.swift in Sources */,
 				5EE67C28248794A1007CACDC /* FirstViewController.swift in Sources */,

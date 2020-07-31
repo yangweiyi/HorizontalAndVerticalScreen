@@ -20,7 +20,6 @@ class ZRTabViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         initTabItem()
         setUpChilderVC(baseVC: FirstViewController(), tabTitle: "第一", navTitle: "第一")
         setUpChilderVC(baseVC: SecondViewController(), tabTitle: "第二", navTitle: "第二")
@@ -42,7 +41,7 @@ class ZRTabViewController: UITabBarController {
     
     func setUpChilderVC(baseVC:ZRBaseController,tabTitle:String,navTitle:String) -> Void {
         
-        let baseNav = ZRNavViewController(rootViewController: baseVC)
+        let baseNav = UINavigationController(rootViewController: baseVC)
         self.addChild(baseNav)
         baseNav.tabBarItem.title = tabTitle
         baseNav.navigationItem.title = navTitle
